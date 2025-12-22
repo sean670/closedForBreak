@@ -23,4 +23,44 @@ box-sizing: border-box;
     color: #fff;
 }   
 
+.lines {
+    position: relative;
+    top: 50px;
+    background-color: #ccc;
+}
 
+.lines::before {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    left: 7%;
+    background-color: #ddd;
+    position: absolute;
+    top: -120px;
+    transform: rotate(120deg);
+}
+
+.lines::after {
+    content: "";
+    display: block;
+    width: 158px;
+    height: 2px;
+    right: 13%;
+    background-color: #ddd;
+    position: absolute;
+    top: -120px;
+    transform: rotate(240deg);
+}
+
+.banner:hover {
+    transform: rotate(-10deg);   
+}
+
+.banner img {
+    width: 80px;
+    position: absolute;
+    right: -40px;
+    top: -50px;
+    transform: rotate(120px);
+}
